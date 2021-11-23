@@ -1,0 +1,58 @@
+We want the regular expressions to interpret the strings we're passing in and not have Python doing anything to them first, so we'll be using the raw strings in the following notes.
+
+
+Raw String:
+Backslash not handled in a special way
+	○ r'\t'Tab
+
+
+pattern = re.complile():
+Allow us to separate out our patterns into a variable
+
+pattern.finditer()
+pattern.findall()
+patterre.complile()
+patterre.match()
+patterre.search()
+
+
+flags
+re.compile(r'start', re.IGNORECASE)
+
+
+
+**Metacharacters:**
+'''
+Character	Description	Example
+\	Signals a special sequence (can also be used to escape special characters)	"\d"
+		
+	Upper and lowercase are opposite	
+.	Any character (except newline character)	"he..o"
+\d	Digit (0-9)	
+\D	Not a Digit (0-9)	
+\w	Word Character (a-z, A-Z, 0-9, _)	
+\W	Not a Word Character	
+\s	Matches any whitespace character; this is equivalent to the class [ \t\n\r\f\v].	
+\S	Matches any non-whitespace character; this is equivalent to the class [^ \t\n\r\f\v].	
+		
+	Anchors	
+\b	Word boundary, indicated by whitespace or a non-alphanumeric character	
+\B	Not a word boundary	
+^	Beginning of a String	"^hello"
+$	End of a String	"planet$"
+		
+[]	Matches characters in brackets	"[a-m]"
+[^ ]	Matches characters NOT in brackets	
+|	Either or	"falls|stays"
+()	Capture and group	 
+		
+	Quantifiers	
+*	0 or more	"he.*o"
++	1 or more	"he.+o"
+?	0 or one	"he.?o"
+{}	Exact number	"he.{2}o"
+{3, 4}	Range of numbers (Minimum, Maximum)	
+```		
+	Examples	
+	'\d\d\d[-.]\d\d\d[-.]\d\d\d\d'	
+	[-.] only matches one character
