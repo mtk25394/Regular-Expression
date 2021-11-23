@@ -21,8 +21,8 @@ re.compile(r'start', re.IGNORECASE)
 
 
 
-**Metacharacters:**
-'''
+Metacharacters:
+
 Character	Description	Example
 \	Signals a special sequence (can also be used to escape special characters)	"\d"
 		
@@ -52,7 +52,7 @@ $	End of a String	"planet$"
 ?	0 or one	"he.?o"
 {}	Exact number	"he.{2}o"
 {3, 4}	Range of numbers (Minimum, Maximum)	
-```		
+		
 	Examples	
 	'\d\d\d[-.]\d\d\d[-.]\d\d\d\d'	
 	[-.] only matches one character
